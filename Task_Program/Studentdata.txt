@@ -1,0 +1,6 @@
+Student ID:1
+Student Name:pinal
+Student ID:2
+Student Name:pratixa
+Student ID:3
+Student Name:milan
