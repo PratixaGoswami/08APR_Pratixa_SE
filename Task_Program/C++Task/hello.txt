@@ -1,0 +1,15 @@
+
+
+ Enter student data:3
+Id: 1
+name: pratixa
+Id: 2
+name: pinal
+Id: 3
+name: bhavika
+Id: 101
+name: pratixa
+Id: 103
+name: bhavika
+Id: 101
+name: pratixa
