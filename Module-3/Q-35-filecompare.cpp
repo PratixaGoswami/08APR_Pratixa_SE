@@ -1,42 +1,32 @@
 //WAP to compare two files.
 #include<stdio.h>
-#include<stdlib.h>
+#include<string.h>
 main()
 {
-	FILE *f1,*f2;
-	int A,B;
-	f1=fopen("a.txt","r");
-	f2=fopen("b.txt","r");
+	FILE *fl;
+	char str[100];
+	fl=fopen("File1.txt","r");
+	fscanf(fl,"%s",str);
+	printf("%s",str);
+	fclose(fl);
 	
-	if(f1==NULL || f2==NULL)
-	{
-		printf("Can not read file");
+	FILE *fl2;
+	char str2[100];
+	fl2=fopen("File2.txt","r");
+	fscanf(fl2,"\n%s",str2);
+	printf("%s",str2);
+    
+    if(strcmp(str,str2)==0)
+    {
+    	printf("\nFile are same...");
 	}
-
-		A=getc(f1);
-		B=getc(f2);
-		
-		while(A!=EOF && B!=EOF )
-		{
-		A=getc(f1);
-		B=getc(f2);
-		}
-		if(A==B)
-		{
-			printf("File are same");
-			
-		}
-		else if(A!=B)
-		{
-			printf("File are not same");
-		}
-		else
-		{
-			printf("\nsome crap occured");
-		}
+	else
+	{
+			printf("Error..");
+	}
+fclose(fl2);
 	
-	fclose(f1);
-	fclose(f2);
+
 	
 	
 }
